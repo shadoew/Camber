@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://jenie.ao.dcn/jenie/niem/JenieServices/2.0"
+	targetNamespace="http://jenie.ao.dcn/jenie/niem/JenieServices/2.0"
+	xmlns:jc="http://jenie.ao.dcn/jenie/niem/JenieServices/2.0" xmlns:nc="http://niem.gov/niem/niem-core/2.0"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:i="http://niem.gov/niem/appinfo/2.0"
+	xmlns:s="http://niem.gov/niem/structures/2.0" elementFormDefault="qualified">
+
+	<xs:import schemaLocation="niem/niem-core/2.0/niem-core.xsd"
+		namespace="http://niem.gov/niem/niem-core/2.0" />
+
+	<xs:element name="TransactionMessage" msdata:Prefix="jc"
+		type="xs:string" />
+	<xs:element name="TransactionId" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="TransactionStatus" msdata:Prefix="jc"
+		type="xs:string" />
+	<xs:element name="SubmittedByJUID" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="ReportsToJUID" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="IdentityServiceURL" msdata:Prefix="jc"
+		type="xs:string" />
+	<xs:element name="JenieGroups" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="BuildingId" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="BuildingName" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="ServiceEndpoint" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="IsJudge" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="JudgeType" msdata:Prefix="jc" type="xs:string" />
+	<xs:element name="JudgeClass" msdata:Prefix="jc" type="xs:string" />
+
+
+	<xs:element name="JenieUser" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="nc:PersonName" minOccurs="0" />
+				<xs:element ref="nc:ContactEmailID" minOccurs="0" />
+				<xs:element name="CourtLoginID" msdata:Prefix="jc" type="xs:string"
+					minOccurs="0" />
+				<xs:element ref="BuildingAddress" minOccurs="0" />
+				<xs:element ref="CourtOfficeAddress" minOccurs="0" />
+				<xs:element ref="DeliveryAddress" minOccurs="0" />
+				<xs:element ref="MailingAddress" minOccurs="0" />
+				<xs:element ref="nc:ContactTelephoneNumber" minOccurs="0" />
+				<xs:element ref="nc:ContactFaxNumber" minOccurs="0" />
+				<xs:element name="JUID" msdata:Prefix="jc" type="xs:string"
+					minOccurs="1" />
+				<xs:element name="JobTitle" msdata:Prefix="jc" type="xs:string"
+					minOccurs="0" />
+				<xs:element name="PreferredTitle" msdata:Prefix="jc"
+					type="xs:string" minOccurs="0" />
+				<xs:element name="BuildingFloor" msdata:Prefix="jc"
+					type="xs:string" minOccurs="0" />
+				<xs:element name="BuildingRoom" msdata:Prefix="jc" type="xs:string"
+					minOccurs="0" />
+				<xs:element name="ReportsToJUID" msdata:Prefix="jc"
+					type="xs:string" minOccurs="0" />
+				<xs:element name="CourtUnitId" msdata:Prefix="jc" type="xs:string"
+					minOccurs="0" />
+				<xs:element name="CourtType" msdata:Prefix="jc" type="xs:string"
+					minOccurs="0" />
+				<xs:element name="JenieGroups" msdata:Prefix="jc" type="xs:string"
+					minOccurs="0" />
+				<xs:element ref="Judge" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Judge" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="IsJudge" msdata:Prefix="jc" minOccurs="0" />
+				<xs:element ref="JudgeType" msdata:Prefix="jc" minOccurs="0" />
+				<xs:element ref="JudgeClass" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PreferredTelephoneNumber" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="nc:FullTelephoneNumber" minOccurs="0" />
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BuildingAddress" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BuildingId" msdata:Prefix="jc"
+					minOccurs="0" />
+				<xs:element ref="ServiceEndpoint" msdata:Prefix="jc"
+					minOccurs="0" />
+				<xs:element ref="nc:StructuredAddress" minOccurs="0" />
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CourtOfficeAddress" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="BuildingId" msdata:Prefix="jc"
+					minOccurs="0" />
+				<xs:element ref="ServiceEndpoint" msdata:Prefix="jc"
+					minOccurs="0" />
+				<xs:element ref="nc:StructuredAddress" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MailingAddress" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ServiceEndpoint" msdata:Prefix="jc"
+					minOccurs="0" />
+				<xs:element ref="nc:AddressFullText" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DeliveryAddress" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ServiceEndpoint" msdata:Prefix="jc"
+					minOccurs="0" />
+				<xs:element ref="nc:AddressFullText" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="JenieServices" msdata:Prefix="jc">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="nc:DocumentFileControlID" minOccurs="1"
+					msdata:Ordinal="0" />
+				<xs:element ref="nc:DocumentCreationDate" minOccurs="1" />
+				<xs:element ref="JenieUser" minOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

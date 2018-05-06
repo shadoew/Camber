@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jc:JenieServices xmlns:nc="http://niem.gov/niem/niem-core/2.0"
+	xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0" 
+	xmlns:jc="http://jenie.ao.dcn/jenie/niem/JenieServices/2.0"
+	xmlns:s="http://niem.gov/niem/structures/2.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xsi:schemaLocation="JENIEIdentityService.xsd">
+	<nc:DocumentFileControlID>20130904-1114.453</nc:DocumentFileControlID>
+	<nc:DocumentCreationDate>
+		<nc:DateTime>2013-10-23T19:05:57.360Z</nc:DateTime>
+	</nc:DocumentCreationDate>
+		<jc:JenieUser>
+			<nc:PersonName>
+				<nc:PersonNamePrefixText>Mrs.</nc:PersonNamePrefixText>ldap personaltitle
+				<nc:PersonGivenName>Ying</nc:PersonGivenName>           <!-- ldap personaltitle -->
+				<nc:PersonPreferredName>Jenny</nc:PersonPreferredName>
+				<nc:PersonSurName>Du</nc:PersonSurName>
+				<nc:PersonNameSuffixText>Jr.</nc:PersonNameSuffixText>
+			</nc:PersonName>
+			<nc:ContactEmailID>Michelle_Randolph@ao.uscourts.gov
+			</nc:ContactEmailID>
+			<jc:CourtLoginID>Michelle Randolph</jc:CourtLoginID>
+
+			<nc:ContactTelephoneNumber>			
+					<nc:TelephoneNumberFullID>202-502-2365</nc:TelephoneNumberFullID>
+					<nc:TelephoneSuffixID>1234</nc:TelephoneSuffixID>
+			</nc:ContactTelephoneNumber>
+
+			<jc:JUID>6QAUR</jc:JUID>
+			<jc:JobTitle>IT Contractor</jc:JobTitle>
+			<jc:PreferredTitle>Master Architect</jc:PreferredTitle>
+			<jc:BuildingFloor>3</jc:BuildingFloor>
+			<jc:BuildingRoom>3.164</jc:BuildingRoom>
+			<jc:ReportsToJUID>70DWO</jc:ReportsToJUID>
+			<jc:CourtUnitId>OHND</jc:CourtUnitId>
+		
+						
+		</jc:JenieUser>
+</jc:JenieServices>
